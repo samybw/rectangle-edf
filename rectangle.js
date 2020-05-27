@@ -1,3 +1,6 @@
-const c1 = require('./c1.txt');
-const c2 = require('./c1.txt');
-console.log(c1 + " " + c2);
+var fs = require('fs');
+
+fs.readFile('c1.txt', 'utf8', function(err, data) {
+    if (err) throw err;
+    console.log(data);
+});
