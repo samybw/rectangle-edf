@@ -1,12 +1,12 @@
 var fs = require('fs');
 
-fs.readFile('./c1.txt','utf8',(err, data) => {
-    if (err) throw err;
-   return console.log(data);
-  });
 
-  fs.readFile('./c2.txt','utf8',(err, data) => {
-    if (err) throw err;
-   return console.log(data);
-  });
+const data = fs.readFileSync('c1.txt', 'UTF-8');
+const lines = data.split(/\r?\n/).map((element) => { 
+    var newElement = element.split('').map(Number) ;
+    return newElement;
+})
+
+console.log(lines);
+
   
