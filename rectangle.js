@@ -9,4 +9,13 @@ const lines = data.split(/\r?\n/).map((element) => {
 
 console.log(lines);
 
+const data2 = fs.readFileSync('c2.txt', 'UTF-8');
+const lines2 = data2.split(/\r?\n/).map((element) => { 
+    var newElement = element.split('').map(Number) ;
+    return newElement;
+})
+
+console.log(lines2);
+
+
   
