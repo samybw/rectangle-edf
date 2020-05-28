@@ -4,5 +4,5 @@ fs.readFile('./c1.txt','utf8',(err, data) => {
     if (err) throw err;
    return console.log(data);
   });
-  console.log(resultat);
+
   
